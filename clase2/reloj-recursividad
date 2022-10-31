@@ -1,0 +1,54 @@
+<?php
+$hora = 0;
+$minuto = 0;
+$segundo = 0;
+sumSeg(255);
+echo " h:".$hora.  " m:".$minuto. " s".$segundo;
+
+
+function sumHora($cantH)
+{
+    global $hora;
+    if ($cantH > 1)
+    { sumHora($cantH-1);
+    }
+    $hora++;
+}
+
+function sumMin($cantM)
+
+{
+    global $minuto;
+    if ($cantM>1)
+    {
+        sumMin($cantM-1);
+    }
+    if($minuto<59)
+    {
+        SumSeg(60);
+    }
+    else
+    {
+        $min = 0;
+        sumHora(1);
+    }
+}
+
+function sumSeg($cantS)
+{
+    global $segundo;
+    global $minuto;
+    if ($cantS>1)
+    {
+        sumSeg($cantS-1);
+    }
+    if ($segundo<59)
+    {
+        $segundo++;
+    }
+    else
+    {
+        $segundo =0;
+        $minuto++;
+    }
+}
