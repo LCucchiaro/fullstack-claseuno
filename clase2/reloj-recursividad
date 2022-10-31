@@ -2,7 +2,7 @@
 $hora = 0;
 $minuto = 0;
 $segundo = 0;
-sumSeg(255);
+sumSeg(4999);
 echo " h:".$hora.  " m:".$minuto. " s".$segundo;
 
 
@@ -25,11 +25,11 @@ function sumMin($cantM)
     }
     if($minuto<59)
     {
-        SumSeg(60);
+        $minuto++;
     }
     else
     {
-        $min = 0;
+        $minuto = 0;
         sumHora(1);
     }
 }
@@ -49,6 +49,6 @@ function sumSeg($cantS)
     else
     {
         $segundo =0;
-        $minuto++;
+        sumMin(1);
     }
 }
