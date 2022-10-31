@@ -1,0 +1,14 @@
+<?php
+
+$contador = 0;
+
+while (true)
+{
+    $contador = aumentarContador($contador);
+}
+
+function aumentarContador($contador)
+{
+    return $contador++;
+    return $contador;
+}
